@@ -9,6 +9,7 @@ interface Person {  // interface 接口名 {属性列表}，用于定义对象�
     name: string;
     age: number;
 }
+// interface 内也可以定义函数，但是不涉及具体的实现，实现应该在实例化的对象中编写
 
 ////////// 函数声明 //////////
 function greet(name: string): string {  // function 函数名(参数列表): 返回值类型 {函数体}
@@ -41,6 +42,18 @@ interface Animal {  // interface 接口名 {属性列表，方法列表}，用�
     name: string;
     sound: string;
     makeSound(): void;
+}
+
+class Dog implements Animal {
+    name = "dog";
+    sound = "bark";
+
+    constructor() { // class 里面定义函数，不需要 function 关键字
+        console.log("dog has been created.");
+    }
+    makeSound(): void { // 上面 Animal 中定义的 makeSound 函数的具体实现
+        console.log(this.sound);
+    }
 }
 
 type ID = string | number;  // 定义一个新的类型 ID，可以是 string 或 number
