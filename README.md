@@ -6,6 +6,7 @@
 
 - 1-HelloWorld - Hello World
 - 2-BasicStructure - Typescript 的基本结构
+- 3-BasicType - Typescript 变量的基本类型
 
 ## References
 
